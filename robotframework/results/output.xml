@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.11.0 on win32)" generated="20221121 14:50:34.412" rpa="false" schemaversion="3">
+<suite id="s1" name="Hrmd" source="D:\robotframework\testcases\hrmd.robot">
+<test id="s1-t1" name="login orange hrm" line="6">
+<kw name="browser should be opened" library="hrm">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221121 14:50:34.734" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20221121 14:50:34.734" endtime="20221121 14:50:45.641"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221121 14:50:45.641" endtime="20221121 14:50:45.772"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221121 14:50:55.782" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20221121 14:50:45.772" endtime="20221121 14:50:55.782"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>login</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221121 14:50:56.097" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221121 14:50:56.097" level="FAIL">Page should have contained text 'login' but did not.</msg>
+<status status="FAIL" starttime="20221121 14:50:55.782" endtime="20221121 14:50:56.164"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>text is found</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20221121 14:50:56.164" endtime="20221121 14:50:56.164"/>
+</kw>
+<status status="FAIL" starttime="20221121 14:50:34.734" endtime="20221121 14:50:56.164"/>
+</kw>
+<status status="FAIL" starttime="20221121 14:50:34.734" endtime="20221121 14:50:56.164">Page should have contained text 'login' but did not.</status>
+</test>
+<test id="s1-t2" name="username and details" line="8">
+<kw name="username entered" library="hrm">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${username}</arg>
+<arg>5</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221121 14:50:56.177" endtime="20221121 14:50:56.233"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>username is found</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221121 14:50:56.233" endtime="20221121 14:50:56.233"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${username}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221121 14:50:56.233" level="INFO">Clicking element 'xpath = //*[@name='username']'.</msg>
+<status status="PASS" starttime="20221121 14:50:56.233" endtime="20221121 14:50:56.329"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>element got clicked</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221121 14:50:56.329" endtime="20221121 14:50:56.329"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${username}</arg>
+<arg>${txt1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221121 14:50:56.329" level="INFO">Typing text 'Admin' into text field 'xpath = //*[@name='username']'.</msg>
+<status status="PASS" starttime="20221121 14:50:56.329" endtime="20221121 14:50:56.460"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>username is entered</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221121 14:50:56.460" endtime="20221121 14:50:56.468"/>
+</kw>
+<status status="PASS" starttime="20221121 14:50:56.173" endtime="20221121 14:50:56.468"/>
+</kw>
+<kw name="password entered" library="hrm">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${password}</arg>
+<arg>5</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221121 14:50:56.468" endtime="20221121 14:50:56.484"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>password is found</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221121 14:50:56.484" endtime="20221121 14:50:56.484"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${password}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221121 14:50:56.492" level="INFO">Clicking element 'xpath = //*[@name='password']'.</msg>
+<status status="PASS" starttime="20221121 14:50:56.484" endtime="20221121 14:50:56.564"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>password got clicked</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221121 14:50:56.572" endtime="20221121 14:50:56.572"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${password}</arg>
+<arg>${txt2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221121 14:50:56.572" level="INFO">Typing text 'admin123' into text field 'xpath = //*[@name='password']'.</msg>
+<status status="PASS" starttime="20221121 14:50:56.572" endtime="20221121 14:50:56.700"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>password is entered</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221121 14:50:56.700" endtime="20221121 14:50:56.700"/>
+</kw>
+<status status="PASS" starttime="20221121 14:50:56.468" endtime="20221121 14:50:56.700"/>
+</kw>
+<kw name="click on login" library="hrm">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${login}</arg>
+<arg>5</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221121 14:50:56.700" endtime="20221121 14:50:56.724"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>login found</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221121 14:50:56.724" endtime="20221121 14:50:56.724"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221121 14:50:56.724" level="INFO">Clicking element 'xpath = //*[@type='submit']'.</msg>
+<status status="PASS" starttime="20221121 14:50:56.724" endtime="20221121 14:50:56.820"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>login got clicked</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221121 14:50:56.820" endtime="20221121 14:50:56.836"/>
+</kw>
+<status status="PASS" starttime="20221121 14:50:56.700" endtime="20221121 14:50:56.836"/>
+</kw>
+<kw name="timelink method" library="hrm">
+<kw name="click on side menu" library="hrm">
+<arg>${timelink}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221121 14:50:56.836" endtime="20221121 14:50:59.721"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221121 14:50:59.721" level="INFO">Clicking element '//*[@href='/web/index.php/time/viewTimeModule']'.</msg>
+<status status="PASS" starttime="20221121 14:50:59.721" endtime="20221121 14:51:01.314"/>
+</kw>
+<status status="PASS" starttime="20221121 14:50:56.836" endtime="20221121 14:51:01.314"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221121 14:51:04.323" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221121 14:51:01.314" endtime="20221121 14:51:04.323"/>
+</kw>
+<status status="PASS" starttime="20221121 14:50:56.836" endtime="20221121 14:51:04.323"/>
+</kw>
+<kw name="Different module" library="hrm">
+<kw name="click on side menu" library="hrm">
+<arg>${reclink}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221121 14:51:04.323" endtime="20221121 14:51:04.353"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221121 14:51:04.361" level="INFO">Clicking element 'xpath = //*[@href='/web/index.php/recruitment/viewRecruitmentModule']'.</msg>
+<status status="PASS" starttime="20221121 14:51:04.361" endtime="20221121 14:51:06.273"/>
+</kw>
+<status status="PASS" starttime="20221121 14:51:04.323" endtime="20221121 14:51:06.273"/>
+</kw>
+<status status="PASS" starttime="20221121 14:51:04.323" endtime="20221121 14:51:06.273"/>
+</kw>
+<status status="PASS" starttime="20221121 14:50:56.173" endtime="20221121 14:51:06.273"/>
+</test>
+<status status="FAIL" starttime="20221121 14:50:34.412" endtime="20221121 14:51:06.281"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Hrmd">Hrmd</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
